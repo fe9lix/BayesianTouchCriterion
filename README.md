@@ -5,9 +5,9 @@ BayesianTouchCriterion
 
 ### Bayesian Touch Criterion
 
-*BayesianTouchCriterion* is an Objective-C implementation of the *Bayesian Target Criterion (BTC)* develped by Xiaojun Bi and Shumin Zhai. Given a touch point and some touch targets, it improves the accuracy of selections by finding the touch target with the shortest *Bayesian Touch Distance (BTD)*. This element is the one that the user intended to select. The results of the evaluation of Bi and Zhai show that selection based on *BTC* is much more precise than using the visual boundary of the element. (Visual boundary checking is how most touch frameworks determine if the finger touches a target.)
+*BayesianTouchCriterion* is an Objective-C implementation of the *Bayesian Target Criterion (BTC)* develped by Xiaojun Bi and Shumin Zhai. Given a touch point and some touch targets, it improves the accuracy of selections by finding the touch target with the shortest *Bayesian Touch Distance (BTD)*. This element is the one that the user intended to select. The results of the evaluation of Bi and Zhai show that selection based on *BTC* is much more precise than using the visual boundary of an element. (Visual boundary checking is how most touch frameworks determine if the finger touches a target.)
 
-The image above shows how randomly placed touch points (the smaller, semi-transparent circles) select corresponding targets (the nine circles). In the user interface of a mobile app, for example, *BTC* could be used to more accurately determine which menu item the user intended to select. The point of using *BTC* is: The intended element is *not* neccessarily the element where the user's touch lies exactly within its visual boundary (e.g., the touch point might be somewhere slightly outside of the visual boundary). *BTC* has the advantage that it doesn't require more detailed information about the touch point (finger posture, touch area...). The only input parameters of the formula are touch location, target center, and target diameter.
+The image above shows how randomly placed touch points (the smaller, semi-transparent circles) select their corresponding targets (the nine big circles). In the user interface of a mobile app, for example, *BTC* could be used to more accurately determine which menu item the user intended to select. The point of using *BTC* instead of visual boundary checking is: The intended element is *not* neccessarily the element where the user's touch lies exactly within the visual boundary of the element (e.g., the touch point might be somewhere slightly outside of the visual boundary). *BTC* has the advantage that it does not require more detailed information about the touch point (finger posture, touch area...). The only required input parameters of the formula are touch location, target center, and target diameter.
 
 If you are interested in the full mathematical details and derivations, here's the full reference: 
 
@@ -19,7 +19,7 @@ The paper is [freely available on Research at Google](http://research.google.com
 
 Just copy the folder `src/BayesianTouchCriterion` into your project. 
 
-The demo project shows a simple usage example. The code creates random touch points and determines the color of each touch point based on *BTC* (see image above). It also adds some interactivity: When you touch the screen, *BTC* finds the target layer in the circle menu and sets its background color to black. 
+The demo project shows a simple usage example. The code creates random touch points and determines the color of each touch point based on *BTC* (see image above). It also adds some interactivity: When you touch the screen, *BTC* finds the target layer of the circle menu and sets its background color to black. 
 
 ### Usage
 
@@ -64,8 +64,7 @@ Use hard-coded values or device detection logic.
 + (void)setPointsPerInch:(CGFloat)newPointsPerInch;
 ```
 
-Calculate *BTD* based on the touch point, the center point of the target and the diameter of the target. The target with the shortest *BTD* is the intended target. 
-You need to add this logic yourself if you use this class directly.
+Calculate *BTD* based on the touch point, the center point of the target and the diameter of the target. The target with the shortest *BTD* is the intended target. (You need to add this logic yourself if you use this class directly.)
 
 ```objective-c
 + (CGFloat)bayesianTouchDistanceWithTouchPoint:(CGPoint)touchPoint
