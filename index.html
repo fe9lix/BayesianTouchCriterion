@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Bayesian Touch Criterion by fe9lix</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Bayesian Touch Criterion</h1>
+        <p class="header"></p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/fe9lix/BayesianTouchCriterion/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/fe9lix/BayesianTouchCriterion/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/fe9lix/BayesianTouchCriterion">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/fe9lix">fe9lix</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="bayesiantouchcriterion" class="anchor" href="#bayesiantouchcriterion"><span class="octicon octicon-link"></span></a>BayesianTouchCriterion</h1>
+
+<p><img src="https://github.com/fe9lix/BayesianTouchCriterion/blob/gh-pages/images/demo_app.png?raw=true" alt="BayesianTouchCriterion"></p>
+
+<h3>
+<a name="bayesian-touch-criterion" class="anchor" href="#bayesian-touch-criterion"><span class="octicon octicon-link"></span></a>Bayesian Touch Criterion</h3>
+
+<p><em>BayesianTouchCriterion</em> is an Objective-C implementation of the <em>Bayesian Target Criterion (BTC)</em> develped by Xiaojun Bi and Shumin Zhai. Given a touch point and some touch targets, it improves the accuracy of selections by finding the touch target with the shortest <em>Bayesian Touch Distance (BTD)</em>. This element is the one that the user intended to select. The results of the evaluation of Bi and Zhai show that selection based on <em>BTC</em> is much more precise than using the visual boundary of the element. (Visual boundary checking is how most touch frameworks determine if the finger touches a target.)</p>
+
+<p>The image above shows how randomly placed touch points (the smaller, semi-transparent circles) select corresponding targets (the nine circles). In the user interface of a mobile app, for example, <em>BTC</em> could be used to more accurately determine which menu item the user intended to select. The point of using <em>BTC</em> is: The intended element is <em>not</em> neccessarily the element where the user's touch lies exactly within its visual boundary (e.g., the touch point might be somewhere slightly outside of the visual boundary). <em>BTC</em> has the advantage that it doesn't require more detailed information about the touch point (finger posture, touch area...). The only input parameters of the formula are touch location, target center, and target diameter.</p>
+
+<p>If you are interested in the full mathematical details and derivations, here's the full reference: </p>
+
+<blockquote>
+<p>Xiaojun Bi and Shumin Zhai. Bayesian touch: A statistical criterion of target selection with finger touch. In Proceedings of the 26th Annual ACM Symposium on User Interface Software and Technology, UIST ’13, pages 51–60, New York, NY, USA, 2013. ACM.</p>
+</blockquote>
+
+<p>The paper is <a href="http://research.google.com/pubs/archive/41644.pdf">freely available on Research at Google</a>.</p>
+
+<h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>Just copy the folder <code>src/BayesianTouchCriterion</code> into your project. </p>
+
+<p>The demo project shows a simple usage example. The code creates random touch points and determines the color of each touch point based on <em>BTC</em> (see image above). It also adds some interactivity: When you touch the screen, <em>BTC</em> finds the target layer in the circle menu and sets its background color to black. </p>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>There are just two simple classes: <code>BTCCalculator</code> and <code>BTCFinder</code>. </p>
+
+<p><code>BTCFinder</code> is more high-level and implements basic mangement for targets. Targets are of type <code>CALayer</code> (if you want to use views, just use a view's layer via <code>view.layer</code>). You can add and remove targets and find the intended target for a touch point.</p>
+
+<p>Internally, <code>BTCFinder</code> uses <code>BTCCalculator</code> to calculate <em>BTD</em>. You can use <code>BTCCalculator</code> directly if you wish to implement your own logic for target management. </p>
+
+<p>It's important that you set the PPI (points per inch) value for the target device before using either <code>BTCFinder</code> or <code>BTCCalculator</code>. Since <em>BTC</em> is based on <em>millimeters</em>, the PPI value is needed to convert from millimeters to pixels per inch and vice versa. (The demo project contains simple PPI detection for current iPhones and iPads.)</p>
+
+<h3>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h3>
+
+<h4>
+<a name="btcfinder" class="anchor" href="#btcfinder"><span class="octicon octicon-link"></span></a><code>BTCFinder</code>
+</h4>
+
+<p>You must set the PPI of the target device before using this class. 
+Use hard-coded values or device detection logic.</p>
+
+<div class="highlight highlight-objective-c"><pre><span class="k">+</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nf">pointsPerInch</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setPointsPerInch:</span><span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">newPointsPerInch</span><span class="p">;</span>
+</pre></div>
+
+<p>Add a <code>CALayer</code> as potential touch target, remove a layer, or remove all layers.</p>
+
+<div class="highlight highlight-objective-c"><pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addTarget:</span><span class="p">(</span><span class="n">CALayer</span> <span class="o">*</span><span class="p">)</span><span class="nv">target</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeTarget:</span><span class="p">(</span><span class="n">CALayer</span> <span class="o">*</span><span class="p">)</span><span class="nv">target</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeAllTargets</span><span class="p">;</span>
+</pre></div>
+
+<p>Find the target based on a touch point. The touch point must be located in the coordinate system of <code>view</code>. </p>
+
+<div class="highlight highlight-objective-c"><pre><span class="k">-</span> <span class="p">(</span><span class="n">CALayer</span> <span class="o">*</span><span class="p">)</span><span class="nf">findTargetForTouchPoint:</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">touchPoint</span>
+                              <span class="nl">inView:</span><span class="p">(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">touchView</span><span class="p">;</span>
+</pre></div>
+
+<h4>
+<a name="btccalculator" class="anchor" href="#btccalculator"><span class="octicon octicon-link"></span></a><code>BTCCalculator</code>
+</h4>
+
+<p>You must set the PPI of the target device before using this class. 
+Use hard-coded values or device detection logic.</p>
+
+<div class="highlight highlight-objective-c"><pre><span class="k">+</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nf">pointsPerInch</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setPointsPerInch:</span><span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">newPointsPerInch</span><span class="p">;</span>
+</pre></div>
+
+<p>Calculate <em>BTD</em> based on the touch point, the center point of the target and the diameter of the target. The target with the shortest <em>BTD</em> is the intended target. 
+You need to add this logic yourself if you use this class directly.</p>
+
+<div class="highlight highlight-objective-c"><pre><span class="k">+</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nf">bayesianTouchDistanceWithTouchPoint:</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">touchPoint</span>
+                                  <span class="nl">targetCenter:</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">targetCenter</span>
+                                <span class="nl">targetDiameter:</span><span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">targetDiameter</span><span class="p">;</span>
+</pre></div>
+
+<h3>
+<a name="important-notes" class="anchor" href="#important-notes"><span class="octicon octicon-link"></span></a>Important Notes</h3>
+
+<ul>
+<li><p><em>BTC</em> works for circular target selection. The formula is based on target center and diameter. For objects with different shapes, you might need to check if you can use the diameter as an approximation and still achieve good results. </p></li>
+<li><p><em>BTC</em> assumes that each point selects one object on screen (i.e., it does not consider empty space between objects). You might need to add your own logic to select the final target.</p></li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
