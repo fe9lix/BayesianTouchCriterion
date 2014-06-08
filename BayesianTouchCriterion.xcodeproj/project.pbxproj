@@ -22,10 +22,9 @@
 		DC22CFF3193F44A10041957E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFEC193F44A10041957E /* ViewController.m */; };
 		DC22CFF4193F44A10041957E /* TouchPointsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFF0193F44A10041957E /* TouchPointsView.m */; };
 		DC22CFF6193F44D80041957E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC22CFF5193F44D80041957E /* ViewController.xib */; };
-		DC22CFF9193F468F0041957E /* BTCFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFF8193F468F0041957E /* BTCFinder.m */; };
-		DC22CFFC193F475C0041957E /* BTCTapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFFB193F475C0041957E /* BTCTapRecognizer.m */; };
 		DC22CFFF193F477F0041957E /* CirclesView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFFE193F477F0041957E /* CirclesView.m */; };
-		DCA3DDD9193F78D400482F5C /* BTCCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA3DDD8193F78D400482F5C /* BTCCalculator.m */; };
+		DCEC175A1944FC2B00A3AB35 /* BTCCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEC17571944FC2B00A3AB35 /* BTCCalculator.m */; };
+		DCEC175B1944FC2B00A3AB35 /* BTCFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEC17591944FC2B00A3AB35 /* BTCFinder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,14 +60,12 @@
 		DC22CFEF193F44A10041957E /* TouchPointsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchPointsView.h; sourceTree = "<group>"; };
 		DC22CFF0193F44A10041957E /* TouchPointsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchPointsView.m; sourceTree = "<group>"; };
 		DC22CFF5193F44D80041957E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		DC22CFF7193F468F0041957E /* BTCFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCFinder.h; sourceTree = "<group>"; };
-		DC22CFF8193F468F0041957E /* BTCFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCFinder.m; sourceTree = "<group>"; };
-		DC22CFFA193F475C0041957E /* BTCTapRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCTapRecognizer.h; sourceTree = "<group>"; };
-		DC22CFFB193F475C0041957E /* BTCTapRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCTapRecognizer.m; sourceTree = "<group>"; };
 		DC22CFFD193F477F0041957E /* CirclesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclesView.h; sourceTree = "<group>"; };
 		DC22CFFE193F477F0041957E /* CirclesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclesView.m; sourceTree = "<group>"; };
-		DCA3DDD7193F78D400482F5C /* BTCCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCCalculator.h; sourceTree = "<group>"; };
-		DCA3DDD8193F78D400482F5C /* BTCCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCCalculator.m; sourceTree = "<group>"; };
+		DCEC17561944FC2B00A3AB35 /* BTCCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCCalculator.h; sourceTree = "<group>"; };
+		DCEC17571944FC2B00A3AB35 /* BTCCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCCalculator.m; sourceTree = "<group>"; };
+		DCEC17581944FC2B00A3AB35 /* BTCFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCFinder.h; sourceTree = "<group>"; };
+		DCEC17591944FC2B00A3AB35 /* BTCFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCFinder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				DC22CFE7193F44A10041957E /* app */,
-				DC22CFED193F44A10041957E /* BTC */,
+				DCEC17551944FC2B00A3AB35 /* BayesianTouchCriterion */,
 				DC22CFEE193F44A10041957E /* viewsupport */,
 			);
 			path = src;
@@ -187,19 +184,6 @@
 			path = app;
 			sourceTree = "<group>";
 		};
-		DC22CFED193F44A10041957E /* BTC */ = {
-			isa = PBXGroup;
-			children = (
-				DCA3DDD7193F78D400482F5C /* BTCCalculator.h */,
-				DCA3DDD8193F78D400482F5C /* BTCCalculator.m */,
-				DC22CFF7193F468F0041957E /* BTCFinder.h */,
-				DC22CFF8193F468F0041957E /* BTCFinder.m */,
-				DC22CFFA193F475C0041957E /* BTCTapRecognizer.h */,
-				DC22CFFB193F475C0041957E /* BTCTapRecognizer.m */,
-			);
-			path = BTC;
-			sourceTree = "<group>";
-		};
 		DC22CFEE193F44A10041957E /* viewsupport */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +193,17 @@
 				DC22CFF0193F44A10041957E /* TouchPointsView.m */,
 			);
 			path = viewsupport;
+			sourceTree = "<group>";
+		};
+		DCEC17551944FC2B00A3AB35 /* BayesianTouchCriterion */ = {
+			isa = PBXGroup;
+			children = (
+				DCEC17561944FC2B00A3AB35 /* BTCCalculator.h */,
+				DCEC17571944FC2B00A3AB35 /* BTCCalculator.m */,
+				DCEC17581944FC2B00A3AB35 /* BTCFinder.h */,
+				DCEC17591944FC2B00A3AB35 /* BTCFinder.m */,
+			);
+			path = BayesianTouchCriterion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,13 +304,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC22CFF1193F44A10041957E /* AppDelegate.m in Sources */,
-				DC22CFFC193F475C0041957E /* BTCTapRecognizer.m in Sources */,
 				DC22CFF2193F44A10041957E /* main.m in Sources */,
 				DC22CFF3193F44A10041957E /* ViewController.m in Sources */,
-				DC22CFF9193F468F0041957E /* BTCFinder.m in Sources */,
-				DCA3DDD9193F78D400482F5C /* BTCCalculator.m in Sources */,
+				DCEC175B1944FC2B00A3AB35 /* BTCFinder.m in Sources */,
 				DC22CFF4193F44A10041957E /* TouchPointsView.m in Sources */,
 				DC22CFFF193F477F0041957E /* CirclesView.m in Sources */,
+				DCEC175A1944FC2B00A3AB35 /* BTCCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
