@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC22CFAF193F433C0041957E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC22CFAE193F433C0041957E /* Foundation.framework */; };
+		DC22CFB1193F433C0041957E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC22CFB0193F433C0041957E /* CoreGraphics.framework */; };
+		DC22CFB3193F433C0041957E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC22CFB2193F433C0041957E /* UIKit.framework */; };
+		DC22CFB9193F433C0041957E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC22CFB7193F433C0041957E /* InfoPlist.strings */; };
+		DC22CFC7193F433C0041957E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC22CFC6193F433C0041957E /* Images.xcassets */; };
+		DC22CFCE193F433C0041957E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC22CFCD193F433C0041957E /* XCTest.framework */; };
+		DC22CFCF193F433C0041957E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC22CFAE193F433C0041957E /* Foundation.framework */; };
+		DC22CFD0193F433C0041957E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC22CFB2193F433C0041957E /* UIKit.framework */; };
+		DC22CFD8193F433C0041957E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC22CFD6193F433C0041957E /* InfoPlist.strings */; };
+		DC22CFDA193F433C0041957E /* BayesianTouchCriterionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFD9193F433C0041957E /* BayesianTouchCriterionTests.m */; };
+		DC22CFF1193F44A10041957E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFE9193F44A10041957E /* AppDelegate.m */; };
+		DC22CFF2193F44A10041957E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFEA193F44A10041957E /* main.m */; };
+		DC22CFF3193F44A10041957E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFEC193F44A10041957E /* ViewController.m */; };
+		DC22CFF4193F44A10041957E /* TouchPointsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFF0193F44A10041957E /* TouchPointsView.m */; };
+		DC22CFF6193F44D80041957E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC22CFF5193F44D80041957E /* ViewController.xib */; };
+		DC22CFF9193F468F0041957E /* BTCFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFF8193F468F0041957E /* BTCFinder.m */; };
+		DC22CFFC193F475C0041957E /* BTCTapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFFB193F475C0041957E /* BTCTapRecognizer.m */; };
+		DC22CFFF193F477F0041957E /* CirclesView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22CFFE193F477F0041957E /* CirclesView.m */; };
+		DCA3DDD9193F78D400482F5C /* BTCCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA3DDD8193F78D400482F5C /* BTCCalculator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC22CFD1193F433C0041957E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC22CFA3193F433C0041957E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC22CFAA193F433C0041957E;
+			remoteInfo = BayesianTouchCriterion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC22CFAB193F433C0041957E /* BayesianTouchCriterion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayesianTouchCriterion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC22CFAE193F433C0041957E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DC22CFB0193F433C0041957E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DC22CFB2193F433C0041957E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DC22CFB6193F433C0041957E /* BayesianTouchCriterion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BayesianTouchCriterion-Info.plist"; sourceTree = "<group>"; };
+		DC22CFB8193F433C0041957E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC22CFBA193F433C0041957E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC22CFBC193F433C0041957E /* BayesianTouchCriterion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BayesianTouchCriterion-Prefix.pch"; sourceTree = "<group>"; };
+		DC22CFC6193F433C0041957E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC22CFCC193F433C0041957E /* BayesianTouchCriterionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayesianTouchCriterionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC22CFCD193F433C0041957E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DC22CFD5193F433C0041957E /* BayesianTouchCriterionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BayesianTouchCriterionTests-Info.plist"; sourceTree = "<group>"; };
+		DC22CFD7193F433C0041957E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC22CFD9193F433C0041957E /* BayesianTouchCriterionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BayesianTouchCriterionTests.m; sourceTree = "<group>"; };
+		DC22CFE8193F44A10041957E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DC22CFE9193F44A10041957E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DC22CFEA193F44A10041957E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC22CFEB193F44A10041957E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DC22CFEC193F44A10041957E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DC22CFEF193F44A10041957E /* TouchPointsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchPointsView.h; sourceTree = "<group>"; };
+		DC22CFF0193F44A10041957E /* TouchPointsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchPointsView.m; sourceTree = "<group>"; };
+		DC22CFF5193F44D80041957E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		DC22CFF7193F468F0041957E /* BTCFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCFinder.h; sourceTree = "<group>"; };
+		DC22CFF8193F468F0041957E /* BTCFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCFinder.m; sourceTree = "<group>"; };
+		DC22CFFA193F475C0041957E /* BTCTapRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCTapRecognizer.h; sourceTree = "<group>"; };
+		DC22CFFB193F475C0041957E /* BTCTapRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCTapRecognizer.m; sourceTree = "<group>"; };
+		DC22CFFD193F477F0041957E /* CirclesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclesView.h; sourceTree = "<group>"; };
+		DC22CFFE193F477F0041957E /* CirclesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclesView.m; sourceTree = "<group>"; };
+		DCA3DDD7193F78D400482F5C /* BTCCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCCalculator.h; sourceTree = "<group>"; };
+		DCA3DDD8193F78D400482F5C /* BTCCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCCalculator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC22CFA8193F433C0041957E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC22CFB1193F433C0041957E /* CoreGraphics.framework in Frameworks */,
+				DC22CFB3193F433C0041957E /* UIKit.framework in Frameworks */,
+				DC22CFAF193F433C0041957E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC22CFC9193F433C0041957E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC22CFCE193F433C0041957E /* XCTest.framework in Frameworks */,
+				DC22CFD0193F433C0041957E /* UIKit.framework in Frameworks */,
+				DC22CFCF193F433C0041957E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC22CFA2193F433C0041957E = {
+			isa = PBXGroup;
+			children = (
+				DC22CFB4193F433C0041957E /* BayesianTouchCriterion */,
+				DC22CFD3193F433C0041957E /* BayesianTouchCriterionTests */,
+				DC22CFAD193F433C0041957E /* Frameworks */,
+				DC22CFAC193F433C0041957E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC22CFAC193F433C0041957E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC22CFAB193F433C0041957E /* BayesianTouchCriterion.app */,
+				DC22CFCC193F433C0041957E /* BayesianTouchCriterionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC22CFAD193F433C0041957E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC22CFAE193F433C0041957E /* Foundation.framework */,
+				DC22CFB0193F433C0041957E /* CoreGraphics.framework */,
+				DC22CFB2193F433C0041957E /* UIKit.framework */,
+				DC22CFCD193F433C0041957E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC22CFB4193F433C0041957E /* BayesianTouchCriterion */ = {
+			isa = PBXGroup;
+			children = (
+				DC22CFC6193F433C0041957E /* Images.xcassets */,
+				DC22CFE6193F44A10041957E /* src */,
+				DC22CFB5193F433C0041957E /* Supporting Files */,
+			);
+			path = BayesianTouchCriterion;
+			sourceTree = "<group>";
+		};
+		DC22CFB5193F433C0041957E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC22CFB6193F433C0041957E /* BayesianTouchCriterion-Info.plist */,
+				DC22CFB7193F433C0041957E /* InfoPlist.strings */,
+				DC22CFBA193F433C0041957E /* main.m */,
+				DC22CFBC193F433C0041957E /* BayesianTouchCriterion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC22CFD3193F433C0041957E /* BayesianTouchCriterionTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC22CFD9193F433C0041957E /* BayesianTouchCriterionTests.m */,
+				DC22CFD4193F433C0041957E /* Supporting Files */,
+			);
+			path = BayesianTouchCriterionTests;
+			sourceTree = "<group>";
+		};
+		DC22CFD4193F433C0041957E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC22CFD5193F433C0041957E /* BayesianTouchCriterionTests-Info.plist */,
+				DC22CFD6193F433C0041957E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC22CFE6193F44A10041957E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DC22CFE7193F44A10041957E /* app */,
+				DC22CFED193F44A10041957E /* BTC */,
+				DC22CFEE193F44A10041957E /* viewsupport */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DC22CFE7193F44A10041957E /* app */ = {
+			isa = PBXGroup;
+			children = (
+				DC22CFE8193F44A10041957E /* AppDelegate.h */,
+				DC22CFE9193F44A10041957E /* AppDelegate.m */,
+				DC22CFEA193F44A10041957E /* main.m */,
+				DC22CFEB193F44A10041957E /* ViewController.h */,
+				DC22CFEC193F44A10041957E /* ViewController.m */,
+				DC22CFF5193F44D80041957E /* ViewController.xib */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		DC22CFED193F44A10041957E /* BTC */ = {
+			isa = PBXGroup;
+			children = (
+				DCA3DDD7193F78D400482F5C /* BTCCalculator.h */,
+				DCA3DDD8193F78D400482F5C /* BTCCalculator.m */,
+				DC22CFF7193F468F0041957E /* BTCFinder.h */,
+				DC22CFF8193F468F0041957E /* BTCFinder.m */,
+				DC22CFFA193F475C0041957E /* BTCTapRecognizer.h */,
+				DC22CFFB193F475C0041957E /* BTCTapRecognizer.m */,
+			);
+			path = BTC;
+			sourceTree = "<group>";
+		};
+		DC22CFEE193F44A10041957E /* viewsupport */ = {
+			isa = PBXGroup;
+			children = (
+				DC22CFFD193F477F0041957E /* CirclesView.h */,
+				DC22CFFE193F477F0041957E /* CirclesView.m */,
+				DC22CFEF193F44A10041957E /* TouchPointsView.h */,
+				DC22CFF0193F44A10041957E /* TouchPointsView.m */,
+			);
+			path = viewsupport;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC22CFAA193F433C0041957E /* BayesianTouchCriterion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC22CFDD193F433C0041957E /* Build configuration list for PBXNativeTarget "BayesianTouchCriterion" */;
+			buildPhases = (
+				DC22CFA7193F433C0041957E /* Sources */,
+				DC22CFA8193F433C0041957E /* Frameworks */,
+				DC22CFA9193F433C0041957E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BayesianTouchCriterion;
+			productName = BayesianTouchCriterion;
+			productReference = DC22CFAB193F433C0041957E /* BayesianTouchCriterion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC22CFCB193F433C0041957E /* BayesianTouchCriterionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC22CFE0193F433C0041957E /* Build configuration list for PBXNativeTarget "BayesianTouchCriterionTests" */;
+			buildPhases = (
+				DC22CFC8193F433C0041957E /* Sources */,
+				DC22CFC9193F433C0041957E /* Frameworks */,
+				DC22CFCA193F433C0041957E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC22CFD2193F433C0041957E /* PBXTargetDependency */,
+			);
+			name = BayesianTouchCriterionTests;
+			productName = BayesianTouchCriterionTests;
+			productReference = DC22CFCC193F433C0041957E /* BayesianTouchCriterionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC22CFA3193F433C0041957E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = BTC;
+				TargetAttributes = {
+					DC22CFCB193F433C0041957E = {
+						TestTargetID = DC22CFAA193F433C0041957E;
+					};
+				};
+			};
+			buildConfigurationList = DC22CFA6193F433C0041957E /* Build configuration list for PBXProject "BayesianTouchCriterion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC22CFA2193F433C0041957E;
+			productRefGroup = DC22CFAC193F433C0041957E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC22CFAA193F433C0041957E /* BayesianTouchCriterion */,
+				DC22CFCB193F433C0041957E /* BayesianTouchCriterionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC22CFA9193F433C0041957E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC22CFC7193F433C0041957E /* Images.xcassets in Resources */,
+				DC22CFF6193F44D80041957E /* ViewController.xib in Resources */,
+				DC22CFB9193F433C0041957E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC22CFCA193F433C0041957E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC22CFD8193F433C0041957E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC22CFA7193F433C0041957E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC22CFF1193F44A10041957E /* AppDelegate.m in Sources */,
+				DC22CFFC193F475C0041957E /* BTCTapRecognizer.m in Sources */,
+				DC22CFF2193F44A10041957E /* main.m in Sources */,
+				DC22CFF3193F44A10041957E /* ViewController.m in Sources */,
+				DC22CFF9193F468F0041957E /* BTCFinder.m in Sources */,
+				DCA3DDD9193F78D400482F5C /* BTCCalculator.m in Sources */,
+				DC22CFF4193F44A10041957E /* TouchPointsView.m in Sources */,
+				DC22CFFF193F477F0041957E /* CirclesView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC22CFC8193F433C0041957E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC22CFDA193F433C0041957E /* BayesianTouchCriterionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC22CFD2193F433C0041957E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC22CFAA193F433C0041957E /* BayesianTouchCriterion */;
+			targetProxy = DC22CFD1193F433C0041957E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC22CFB7193F433C0041957E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC22CFB8193F433C0041957E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DC22CFD6193F433C0041957E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC22CFD7193F433C0041957E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC22CFDB193F433C0041957E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DC22CFDC193F433C0041957E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC22CFDE193F433C0041957E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BayesianTouchCriterion/BayesianTouchCriterion-Prefix.pch";
+				INFOPLIST_FILE = "BayesianTouchCriterion/BayesianTouchCriterion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DC22CFDF193F433C0041957E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BayesianTouchCriterion/BayesianTouchCriterion-Prefix.pch";
+				INFOPLIST_FILE = "BayesianTouchCriterion/BayesianTouchCriterion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DC22CFE1193F433C0041957E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BayesianTouchCriterion.app/BayesianTouchCriterion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BayesianTouchCriterion/BayesianTouchCriterion-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BayesianTouchCriterionTests/BayesianTouchCriterionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DC22CFE2193F433C0041957E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BayesianTouchCriterion.app/BayesianTouchCriterion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BayesianTouchCriterion/BayesianTouchCriterion-Prefix.pch";
+				INFOPLIST_FILE = "BayesianTouchCriterionTests/BayesianTouchCriterionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC22CFA6193F433C0041957E /* Build configuration list for PBXProject "BayesianTouchCriterion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC22CFDB193F433C0041957E /* Debug */,
+				DC22CFDC193F433C0041957E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC22CFDD193F433C0041957E /* Build configuration list for PBXNativeTarget "BayesianTouchCriterion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC22CFDE193F433C0041957E /* Debug */,
+				DC22CFDF193F433C0041957E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC22CFE0193F433C0041957E /* Build configuration list for PBXNativeTarget "BayesianTouchCriterionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC22CFE1193F433C0041957E /* Debug */,
+				DC22CFE2193F433C0041957E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC22CFA3193F433C0041957E /* Project object */;
+}
