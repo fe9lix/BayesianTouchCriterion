@@ -29,6 +29,8 @@
 }
 
 - (void)setupBTCFinder {
+    // NOTE: This doesn't work for the iPad Mini!
+    // Either hard-code the PPI value for new devices or use more advanced device detection logic.
     CGFloat ppi = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 132.0f : 163.0f;
     [BTCFinder setPointsPerInch:ppi];
     

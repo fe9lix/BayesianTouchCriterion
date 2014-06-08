@@ -1,3 +1,6 @@
+// Calculation of the Bayesian Touch Criterion based on the paper:
+// http://research.google.com/pubs/archive/41644.pdf
+
 #import "BTCCalculator.h"
 
 static CGFloat pointsPerInch = 0.0f;
