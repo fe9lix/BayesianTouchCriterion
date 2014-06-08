@@ -38,9 +38,9 @@
 <h3>
 <a name="bayesian-touch-criterion" class="anchor" href="#bayesian-touch-criterion"><span class="octicon octicon-link"></span></a>Bayesian Touch Criterion</h3>
 
-<p><em>BayesianTouchCriterion</em> is an Objective-C implementation of the <em>Bayesian Target Criterion (BTC)</em> develped by Xiaojun Bi and Shumin Zhai. Given a touch point and some touch targets, it improves the accuracy of selections by finding the touch target with the shortest <em>Bayesian Touch Distance (BTD)</em>. This element is the one that the user intended to select. The results of the evaluation of Bi and Zhai show that selection based on <em>BTC</em> is much more precise than using the visual boundary of the element. (Visual boundary checking is how most touch frameworks determine if the finger touches a target.)</p>
+<p><em>BayesianTouchCriterion</em> is an Objective-C implementation of the <em>Bayesian Target Criterion (BTC)</em> develped by Xiaojun Bi and Shumin Zhai. Given a touch point and some touch targets, it improves the accuracy of selections by finding the touch target with the shortest <em>Bayesian Touch Distance (BTD)</em>. This element is the one that the user intended to select. The results of the evaluation of Bi and Zhai show that selection based on <em>BTC</em> is much more precise than using the visual boundary of an element. (Visual boundary checking is how most touch frameworks determine if the finger touches a target.)</p>
 
-<p>The image above shows how randomly placed touch points (the smaller, semi-transparent circles) select corresponding targets (the nine circles). In the user interface of a mobile app, for example, <em>BTC</em> could be used to more accurately determine which menu item the user intended to select. The point of using <em>BTC</em> is: The intended element is <em>not</em> neccessarily the element where the user's touch lies exactly within its visual boundary (e.g., the touch point might be somewhere slightly outside of the visual boundary). <em>BTC</em> has the advantage that it doesn't require more detailed information about the touch point (finger posture, touch area...). The only input parameters of the formula are touch location, target center, and target diameter.</p>
+<p>The image above shows how randomly placed touch points (the smaller, semi-transparent circles) select their corresponding targets (the nine big circles). In the user interface of a mobile app, for example, <em>BTC</em> could be used to more accurately determine which menu item the user intended to select. The point of using <em>BTC</em> instead of visual boundary checking is: The intended element is <em>not</em> neccessarily the element where the user's touch lies exactly within the visual boundary of the element (e.g., the touch point might be somewhere slightly outside of the visual boundary). <em>BTC</em> has the advantage that it does not require more detailed information about the touch point (finger posture, touch area...). The only required input parameters of the formula are touch location, target center, and target diameter.</p>
 
 <p>If you are interested in the full mathematical details and derivations, here's the full reference: </p>
 
@@ -55,7 +55,7 @@
 
 <p>Just copy the folder <code>src/BayesianTouchCriterion</code> into your project. </p>
 
-<p>The demo project shows a simple usage example. The code creates random touch points and determines the color of each touch point based on <em>BTC</em> (see image above). It also adds some interactivity: When you touch the screen, <em>BTC</em> finds the target layer in the circle menu and sets its background color to black. </p>
+<p>The demo project shows a simple usage example. The code creates random touch points and determines the color of each touch point based on <em>BTC</em> (see image above). It also adds some interactivity: When you touch the screen, <em>BTC</em> finds the target layer of the circle menu and sets its background color to black. </p>
 
 <h3>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
@@ -106,8 +106,7 @@ Use hard-coded values or device detection logic.</p>
 <span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setPointsPerInch:</span><span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">newPointsPerInch</span><span class="p">;</span>
 </pre></div>
 
-<p>Calculate <em>BTD</em> based on the touch point, the center point of the target and the diameter of the target. The target with the shortest <em>BTD</em> is the intended target. 
-You need to add this logic yourself if you use this class directly.</p>
+<p>Calculate <em>BTD</em> based on the touch point, the center point of the target and the diameter of the target. The target with the shortest <em>BTD</em> is the intended target. (You need to add this logic yourself if you use this class directly.)</p>
 
 <div class="highlight highlight-objective-c"><pre><span class="k">+</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nf">bayesianTouchDistanceWithTouchPoint:</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">touchPoint</span>
                                   <span class="nl">targetCenter:</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">targetCenter</span>
